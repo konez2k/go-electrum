@@ -62,7 +62,7 @@ Implemented Electrum commands based on v3.2.3.
 | listrequests      | [ ]         |                    |
 | listunspent       | [X]         |                    |
 | make_seed         | [X]         |                    |
-| notify            | [ ]         |                    |
+| notify            | [X]         |                    |
 | password          | [X]         |                    |
 | payto             | [X]         |                    |
 | paytomany         | [ ]         |                    |

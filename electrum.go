@@ -215,6 +215,12 @@ type (
 		T       string `json:"t"`
 		Version string `json:"version"`
 	}
+
+	// NotifyRequest represents the structure used by electrum notify POST call.
+	NotifyRequest struct {
+		Address string  `json:"address"`
+		Status  *string `json:"status"`
+	}
 )
 
 const (
@@ -867,6 +873,22 @@ func (c *Client) MakeSeed() (seed string, err error) {
 	}
 
 	err = json.Unmarshal(r.Result, &seed)
+	return
+}
+
+// Notify watch an address, every time the address changes, an http POST is sent to the URL.
+func (c *Client) Notify(address, url string) (result bool, err error) {
+	params := map[string]interface{}{
+		"address": address,
+		"URL":     url,
+	}
+
+	r, err := c.request("notify", params)
+	if err = c.error(err, &r); err != nil {
+		return
+	}
+
+	err = json.Unmarshal(r.Result, &result)
 	return
 }
 
