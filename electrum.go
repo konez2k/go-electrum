@@ -248,6 +248,8 @@ type (
 const (
 	// connection timeout
 	timeout = 60
+	// COIN represents 1 BTC in sats
+	COIN = 100000000
 )
 
 // New return a new JSON-RPC client.
