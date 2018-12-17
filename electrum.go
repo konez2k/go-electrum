@@ -199,12 +199,34 @@ type (
 
 	// DeserializedTransaction represents the structure returned from deserialize method.
 	DeserializedTransaction struct {
-		Partial   bool                `json:"partial"`
-		Version   int                 `json:"version"`
-		SegwitSer bool                `json:"segwit_ser"`
-		Inputs    []TransactionInput  `json:"inputs"`
-		Outputs   []TransactionOutput `json:"outputs"`
-		LockTime  uint64              `json:"lockTime"`
+		Partial   bool                 `json:"partial"`
+		Version   int                  `json:"version"`
+		SegwitSer bool                 `json:"segwit_ser"`
+		Inputs    []DeserializedInput  `json:"inputs"`
+		Outputs   []DeserializedOutput `json:"outputs"`
+		LockTime  uint64               `json:"lockTime"`
+	}
+
+	// DeserializedInput represents the structure returned from deserialize inputs.
+	DeserializedInput struct {
+		Address     *string `json:"address"`
+		NumSig      uint64  `json:"num_sig"`
+		PrevoutHash string  `json:"prevout_hash"`
+		PrevoutN    int     `json:"prevout_n"`
+		ScriptSig   string  `json:"scriptSig"`
+		Sequence    uint64  `json:"sequence"`
+		Type        string  `json:"type"`
+		Witness     string  `json:"witness"`
+	}
+
+	// DeserializedOutput represents the structure returned from deserialize outputs.
+	DeserializedOutput struct {
+		Address      string `json:"address"`
+		PrevoutN     int    `json:"prevout_n"`
+		ScriptPubKey string `json:"scriptPubKey"`
+		Type         int    `json:"type"`
+		// Value represented in sats
+		Value uint64 `json:"value"`
 	}
 
 	// Server represents the structure returned from getservers method.
