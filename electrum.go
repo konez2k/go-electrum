@@ -252,6 +252,11 @@ const (
 	COIN = 100000000
 )
 
+// GetValue returns the output value as float64.
+func (o *DeserializedOutput) GetValue() float64 {
+	return float64(o.Value) / float64(COIN)
+}
+
 // New return a new JSON-RPC client.
 func New(host string, port int, username, password string, useSSL bool) (*Client, error) {
 	if host == "" {
