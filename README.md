@@ -25,61 +25,61 @@ Implemented Electrum commands based on v3.2.3.
 
 | Command           | Implemented | Notes              |
 |-------------------|-------------|--------------------|
-| addrequest        | [ ]         |                    |
-| addtransaction    | [ ]         |                    |
-| broadcast         | [X]         |                    |
-| clearrequests     | [ ]         |                    |
-| create            | [ ]         | Not yet available. |
-| createmultisig    | [ ]         |                    |
-| createnewaddress  | [X]         |                    |
-| decrypt           | [ ]         |                    |
-| deserialize       | [X]         |                    |
-| encrypt           | [ ]         |                    |
-| freeze            | [ ]         |                    |
-| getaddressbalance | [X]         |                    |
-| getaddresshistory | [X]         |                    |
-| getaddressunspent | [X]         |                    |
-| getalias          | [ ]         |                    |
-| getbalance        | [X]         |                    |
-| getconfig         | [X]         |                    |
-| getfeerate        | [X]         |                    |
-| getmasterprivate  | [X]         |                    |
-| getmerkle         | [X]         |                    |
-| getmpk            | [X]         |                    |
-| getprivatekeys    | [X]         |                    |
-| getpubkeys        | [X]         |                    |
-| getrequest        | [ ]         |                    |
-| getseed           | [X]         |                    |
-| getservers        | [X]         |                    |
-| gettransaction    | [X]         |                    |
-| getunusedaddress  | [X]         |                    |
-| history           | [X]         |                    |
-| importprivkey     | [ ]         |                    |
-| is_synchronized   | [X]         |                    |
-| ismine            | [X]         |                    |
-| listaddresses     | [X]         |                    |
-| listcontacts      | [ ]         |                    |
-| listrequests      | [ ]         |                    |
-| listunspent       | [X]         |                    |
-| make_seed         | [X]         |                    |
-| notify            | [X]         |                    |
-| password          | [X]         |                    |
-| payto             | [X]         |                    |
-| paytomany         | [ ]         |                    |
-| restore           | [ ]         | Not yet available. |
-| rmrequest         | [ ]         |                    |
-| searchcontacts    | [ ]         |                    |
-| serialize         | [ ]         |                    |
-| setconfig         | [X]         |                    |
-| setlabel          | [ ]         |                    |
-| signmessage       | [X]         |                    |
-| signrequest       | [ ]         |                    |
-| signtransaction   | [ ]         |                    |
-| sweep             | [ ]         |                    |
-| unfreeze          | [ ]         |                    |
-| validateaddress   | [X]         |                    |
-| verifymessage     | [X]         |                    |
-| version           | [X]         |                    |
+| addrequest        | ⬜          |                    |
+| addtransaction    | ⬜          |                    |
+| broadcast         | ✅          |                    |
+| clearrequests     | ⬜          |                    |
+| create            | ⬜          | Not yet available. |
+| createmultisig    | ⬜          |                    |
+| createnewaddress  | ✅          |                    |
+| decrypt           | ⬜          |                    |
+| deserialize       | ✅          |                    |
+| encrypt           | ⬜          |                    |
+| freeze            | ⬜          |                    |
+| getaddressbalance | ✅          |                    |
+| getaddresshistory | ✅          |                    |
+| getaddressunspent | ✅          |                    |
+| getalias          | ⬜          |                    |
+| getbalance        | ✅          |                    |
+| getconfig         | ✅          |                    |
+| getfeerate        | ✅          |                    |
+| getmasterprivate  | ✅          |                    |
+| getmerkle         | ✅          |                    |
+| getmpk            | ✅          |                    |
+| getprivatekeys    | ✅          |                    |
+| getpubkeys        | ✅          |                    |
+| getrequest        | ⬜          |                    |
+| getseed           | ✅          |                    |
+| getservers        | ✅          |                    |
+| gettransaction    | ✅          |                    |
+| getunusedaddress  | ✅          |                    |
+| history           | ✅          |                    |
+| importprivkey     | ⬜          |                    |
+| is_synchronized   | ✅          |                    |
+| ismine            | ✅          |                    |
+| listaddresses     | ✅          |                    |
+| listcontacts      | ⬜          |                    |
+| listrequests      | ⬜          |                    |
+| listunspent       | ✅          |                    |
+| make_seed         | ✅          |                    |
+| notify            | ✅          |                    |
+| password          | ✅          |                    |
+| payto             | ✅          |                    |
+| paytomany         | ⬜          |                    |
+| restore           | ⬜          | Not yet available. |
+| rmrequest         | ⬜          |                    |
+| searchcontacts    | ⬜          |                    |
+| serialize         | ⬜          |                    |
+| setconfig         | ✅          |                    |
+| setlabel          | ⬜          |                    |
+| signmessage       | ✅          |                    |
+| signrequest       | ⬜          |                    |
+| signtransaction   | ⬜          |                    |
+| sweep             | ⬜          |                    |
+| unfreeze          | ⬜          |                    |
+| validateaddress   | ✅          |                    |
+| verifymessage     | ✅          |                    |
+| version           | ✅          |                    |
 
 ## Package Tests
 

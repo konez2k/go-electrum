@@ -158,7 +158,7 @@ type (
 	HistoryTransaction struct {
 		Balance       string              `json:"balance"`
 		Confirmations uint64              `json:"confirmations"`
-		Date          JSONDate            `json:"date"`
+		Date          *JSONDate           `json:"date"`
 		FiatDefault   bool                `json:"fiat_default"`
 		FiatValue     string              `json:"fiat_value"`
 		Height        uint64              `json:"height"`
