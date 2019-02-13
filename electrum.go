@@ -411,24 +411,15 @@ func (c *Client) AddTransaction(tx string) (err error) {
 }
 
 // Broadcast broadcasts a transaction to the network.
-func (c *Client) Broadcast(hex string) (result bool, txID string, err error) {
+func (c *Client) Broadcast(hex string) (txID string, err error) {
 	r, err := c.request("broadcast", []interface{}{hex})
 	if err = c.error(err, &r); err != nil {
 		return
 	}
 
-	// TODO:
-	// "result": [true, "7286a49f57788d0c2b9d44c0b9c3d96b2045c3f78eb231af1cf3b72a9913a015"]
-
-	var res []interface{}
-	err = json.Unmarshal(r.Result, &res)
+	err = json.Unmarshal(r.Result, &txID)
 	if err != nil {
 		return
-	}
-
-	result = res[0].(bool)
-	if result {
-		txID = res[1].(string)
 	}
 
 	return
